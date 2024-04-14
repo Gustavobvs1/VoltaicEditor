@@ -1,9 +1,9 @@
-import { app, shell, BrowserWindow, ipcMain } from "electron";
+import { app, shell, BrowserWindow } from "electron";
 import { join } from "path";
 import { electronApp, optimizer, is } from "@electron-toolkit/utils";
 import icon from "../../resources/icon.png?asset";
 
-function createWindow(): void {
+function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 700,
     height: 400,
@@ -50,3 +50,4 @@ app.on("window-all-closed", () => {
     app.quit();
   }
 });
+
